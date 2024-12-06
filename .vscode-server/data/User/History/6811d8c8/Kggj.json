@@ -1,0 +1,23 @@
+{
+  "git.suggestSmartCommit": false,
+  "update.mode": "none",
+  "update.enableWindowsBackgroundUpdates": false,
+  "githubPullRequests.remotes": [
+    "main",
+    "upstream",
+    "https://github.com/joko345/gitreact.git"
+  ],
+  "git.openRepositoryInParentFolders": "never",
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.startupEditor": "none",
+  "remote.SSH.path": "C:\\WINDOWS\\System32\\OpenSSH\\ssh.exe",
+  "remote.SSH.remotePlatform": {
+    "ec2-47-129-240-41.ap-southeast-1.compute.amazonaws.com": "linux"
+  }
+}
