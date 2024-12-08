@@ -1,0 +1,19 @@
+{
+  "name": "noteback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^21.3.12",
+    "nanoid": "^3.3.8"
+  }
+}

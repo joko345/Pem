@@ -1,1 +1,44 @@
 exit
+cd Pem
+telnet 47.129.240.41 5000
+git init
+git remote add origin https://github.com/joko345/Pem.git
+git clone https://github.com/joko345/Pem.git
+cd Pem
+git add .
+git commit -m 'new'
+git push -u origin
+git add .
+git commit -m 'new'
+git remote -v
+git status
+git add .
+git remote -v
+git commit -m 'new'
+git pull
+git push -u origin
+cd ..
+git add .
+git commit -m 'new'
+git push -u origin
+git push --set-upstream origin main
+git push --set-upstream origin master
+git branch
+git status
+git add .
+git commit -m 'new'
+git push -u origin
+cd Pem
+npm i
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+cd ..
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+nvm install v21.7.1
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+nvm --version
+nvm install v21.7.1
+cd Pem
+npm i
+npm run start:dev
