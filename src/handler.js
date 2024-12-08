@@ -1,5 +1,5 @@
 const { nanoid } = require("nanoid");
-const books = [];
+const books = require("./books");
 
 const addBookHandler = (request, h) => {
   const {
@@ -62,6 +62,7 @@ const addBookHandler = (request, h) => {
         bookId: id,
       },
     });
+      response.header("Access-Control-Allow-Origin", "*");
     response.code(201);
     return response;
   }
@@ -74,7 +75,6 @@ const addBookHandler = (request, h) => {
   return response;
 };
 
-// Handler untuk mendapatkan semua buku
 const getAllBooksHandler = (request, h) => {
   const booksResponse = books.map((book) => ({
     id: book.id,
