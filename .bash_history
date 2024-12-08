@@ -87,3 +87,20 @@ cd ..
 cd pew
 ls
 cd Pem
+git remote -v
+git status
+cd Pem
+git status
+git add .
+git commit -m 'new'
+git push -u origin
+npm run start
+cd ..
+git add .
+git commit -m 'new'
+git push -u origin
+cd Pem
+git add .
+git commit -m 'new'
+git push -u origin
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
