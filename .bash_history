@@ -42,3 +42,48 @@ nvm install v21.7.1
 cd Pem
 npm i
 npm run start:dev
+cd pem
+cd Pem
+npm run start:prod
+telnet 47.129.240.41 5000
+npm run start:prod
+telnet 47.129.240.41 5000
+node -v
+nmv -v
+nvm -v
+npm install pm2 -g --save
+cd ..
+npm install pm2 -g --save
+pm2 start npm --name "notes-api" -- run "start:prod"
+cd Pem
+telnet 47.129.240.41 5000
+npm run start:prod
+cd ..
+npm install newman --g --save
+cd Pem
+newman -v
+npm run start
+newman run postman.json
+cd Pem
+newman run postman.json
+cd ..
+git add .
+git commit -m 'new'
+git push -u origin
+git remote -v
+cd Pem
+git status
+git add .
+git commit -m 'new'
+git push -u origin
+git add .
+git commit -m 'new'
+git push -u origin
+npm run start
+get Pem
+cd Pem
+npm run start
+cd ..
+cd pew
+ls
+cd Pem
