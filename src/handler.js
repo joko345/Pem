@@ -1,6 +1,5 @@
 const { nanoid } = require("nanoid");
 const books = require("./books");
-
 const addBookHandler = (request, h) => {
   const {
     name,
@@ -35,6 +34,7 @@ const addBookHandler = (request, h) => {
   const id = nanoid(16);
   const insertedAt = new Date().toISOString();
   const updatedAt = insertedAt;
+  const finished = readPage === pageCount; // Menambahkan properti finished
 
   const newBook = {
     id,
@@ -46,6 +46,7 @@ const addBookHandler = (request, h) => {
     pageCount,
     readPage,
     reading,
+    finished, // Menambahkan properti finished
     insertedAt,
     updatedAt,
   };
@@ -62,7 +63,7 @@ const addBookHandler = (request, h) => {
         bookId: id,
       },
     });
-      response.header("Access-Control-Allow-Origin", "*");
+    response.header("Access-Control-Allow-Origin", "*");
     response.code(201);
     return response;
   }
@@ -74,6 +75,7 @@ const addBookHandler = (request, h) => {
   response.code(500);
   return response;
 };
+
 
 const getAllBooksHandler = (request, h) => {
   const booksResponse = books.map((book) => ({
@@ -115,7 +117,6 @@ const getBookByIdHandler = (request, h) => {
   response.code(200);
   return response;
 };
-
 const editBookByIdHandler = (request, h) => {
   const { bookId } = request.params;
 
@@ -167,8 +168,10 @@ const editBookByIdHandler = (request, h) => {
     return response;
   }
 
-
   const updatedAt = new Date().toISOString();
+  const finished = readPage === pageCount; // Menambahkan properti finished
+
+  // Perbarui data buku
   books[index] = {
     ...books[index],
     name,
@@ -179,16 +182,21 @@ const editBookByIdHandler = (request, h) => {
     pageCount,
     readPage,
     reading,
+    finished,  // Menambahkan properti finished
     updatedAt,
   };
 
   const response = h.response({
     status: "success",
     message: "Buku berhasil diperbarui",
+    data: {
+      book: books[index], // Mengembalikan data buku yang telah diperbarui
+    },
   });
   response.code(200);
   return response;
 };
+
 const deleteBookByIdHandler = (request, h) => {
   const { bookId } = request.params;
 
