@@ -28,17 +28,18 @@ const routes = [
     path: "/books/{bookid}",
     handler: getBookByIdHandler,
   },
-  {
-    method: "PUT",
-    path: "/books/{bookid}",
-    handler: editBookByIdHandler,
-  },
-  {
-    method: "DELETE",
-    path: "/books/{bookid}",
-    handler: deleteBookByIdHandler,
+{
+  method: "PUT",
+  path: "/books/{bookId}",
+  handler: editBookByIdHandler,
+},
 
-  },
+{
+  method: "DELETE",
+  path: "/books/{bookId}",
+  handler: deleteBookByIdHandler
+},
+
 ];
 
 module.exports = routes;

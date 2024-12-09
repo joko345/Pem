@@ -92,11 +92,10 @@ const getAllBooksHandler = (request, h) => {
     return response;
     
 };
-
 const getBookByIdHandler = (request, h) => {
-  const { bookId } = request.params;
+  const { bookid } = request.params;
 
-  const book = books.find((b) => b.id === bookId);
+  const book = books.find((b) => b.id === bookid);
 
   if (!book) {
     const response = h.response({
@@ -119,6 +118,25 @@ const getBookByIdHandler = (request, h) => {
 
 const editBookByIdHandler = (request, h) => {
   const { bookId } = request.params;
+
+  if (!bookId) {
+    const response = h.response({
+      status: "fail",
+      message: "Id buku tidak ditemukan pada URL",
+    });
+    response.code(400);
+    return response;
+  }
+
+  const index = books.findIndex((book) => book.id === bookId);
+  if (index === -1) {
+    const response = h.response({
+      status: "fail",
+      message: "Gagal memperbarui buku. Id tidak ditemukan",
+    });
+    response.code(404);
+    return response;
+  }
 
   const {
     name,
@@ -150,17 +168,6 @@ const editBookByIdHandler = (request, h) => {
   }
 
 
-  const index = books.findIndex((book) => book.id === bookId);
-
-  if (index === -1) {
-    const response = h.response({
-      status: "fail",
-      message: "Gagal memperbarui buku. Id tidak ditemukan",
-    });
-    response.code(404);
-    return response;
-  }
-
   const updatedAt = new Date().toISOString();
   books[index] = {
     ...books[index],
@@ -182,7 +189,6 @@ const editBookByIdHandler = (request, h) => {
   response.code(200);
   return response;
 };
-
 const deleteBookByIdHandler = (request, h) => {
   const { bookId } = request.params;
 
