@@ -34,7 +34,7 @@ const addBookHandler = (request, h) => {
   const id = nanoid(16);
   const insertedAt = new Date().toISOString();
   const updatedAt = insertedAt;
-  const finished = readPage === pageCount; // Menambahkan properti finished
+  const finished = readPage === pageCount;
 
   const newBook = {
     id,
@@ -46,7 +46,7 @@ const addBookHandler = (request, h) => {
     pageCount,
     readPage,
     reading,
-    finished, // Menambahkan properti finished
+    finished, 
     insertedAt,
     updatedAt,
   };
@@ -169,9 +169,8 @@ const editBookByIdHandler = (request, h) => {
   }
 
   const updatedAt = new Date().toISOString();
-  const finished = readPage === pageCount; // Menambahkan properti finished
+  const finished = readPage === pageCount; 
 
-  // Perbarui data buku
   books[index] = {
     ...books[index],
     name,
@@ -182,7 +181,7 @@ const editBookByIdHandler = (request, h) => {
     pageCount,
     readPage,
     reading,
-    finished,  // Menambahkan properti finished
+    finished, 
     updatedAt,
   };
 
@@ -190,7 +189,7 @@ const editBookByIdHandler = (request, h) => {
     status: "success",
     message: "Buku berhasil diperbarui",
     data: {
-      book: books[index], // Mengembalikan data buku yang telah diperbarui
+      book: books[index],
     },
   });
   response.code(200);
