@@ -104,3 +104,29 @@ git add .
 git commit -m 'new'
 git push -u origin
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+cd Pem
+npm run start
+cd ..
+git add .
+git commit -m 'new'
+git push -u origin
+cd Pem
+git add .
+git commit -m 'new'
+git push -u origin
+cd Pem
+npm run start
+git add .
+git commit -m 'new'
+git push -u origin
+npm run start
+lsof -i :9000
+npm run start
+git add .
+git commit -m 'new'
+git push -u origin
+git add .
+git commit -m 'new'
+git push -u origin
+cd ..
+git branch
