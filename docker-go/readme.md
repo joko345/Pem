@@ -39,13 +39,12 @@ atur izin file
 chmod 400 ~/downloads/docker-go/aws2x.pem
 untuk poweshel=
 docker-machine create -d amazonec2 `
---amazonec2-region ap-southeast-1 `
---amazonec2-instance-type t2.micro `
---amazonec2-ssh-keypath "C:\Users\Joko Prasetyo Utomo\downloads\aws2x.pem" `
---amazonec2-ssh-user ubuntu `
-aws-cli-study2
-
-
+  --amazonec2-region ap-southeast-1 `
+  --amazonec2-instance-type t2.micro `
+  --amazonec2-ssh-keypath "C:\Users\Joko Prasetyo Utomo\downloads\aws2x.pem" `
+  --amazonec2-ssh-user ubuntu `
+  --engine-install-url https://get.docker.com/ `
+  aws-cli-study21
 
 buat aws
 docker-machine create -d amazonec2 \
@@ -53,4 +52,9 @@ docker-machine create -d amazonec2 \
 --amazonec2-instance-type t2.micro \
 --amazonec2-ssh-keypath ~/docker-go/aws2x.pem \
 --amazonec2-ssh-user ubuntu \
+--engine-install-url https://get.docker.com/ \
 aws-cli-go
+
+pada aws, agar comannd yang berjalan sinkron dengan di aws=
+& docker-machine env aws-cli-study211 | Invoke-Expression
+docker-machine regenerate-certs aws-cli-study211

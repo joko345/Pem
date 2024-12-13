@@ -218,3 +218,151 @@ docker-machine create -d amazonec2 --amazonec2-region ap-southeast-1 --amazonec2
 eval $(night)
 eval $(docker-machine env night)
 ssh -i ~/docker-go/aws2x.pem ubuntu@54.169.64.12
+git add .
+git commit -m =new'-
+git commit -m 'new'
+git push -u origin
+git add .
+git commit -m 'new'
+git push -u origin
+git rm --cached .aws/config .aws/credentials .ssh/known_hosts .ssh/known_hosts.old .sudo_as_admin_successful awscliv2.zip docker-go/aws2x.pem.pub
+git commit -m "Remove sensitive files from Git tracking"
+git push -u origin
+git add .
+git commit -m "Remove sensitive files from Git tracking"
+git add .
+git commit -m "Remove sensitive files from Git tracking"
+git push -u origin
+git rm --cached .aws/config .aws/credentials .ssh/known_hosts .ssh/known_hosts.old .sudo_as_admin_successful awscliv2.zip docker-go/aws2x.pem.pub
+git rm --cached .aws/config .aws/credentials .ssh/known_hosts .ssh/known_hosts.old .sudo_as_admin_successful awscliv2.zip docker-go/aws2x.pem.pub .zip
+git add .
+git commit -m 'new'
+git push -u origin
+Enumerating objects: 53, done.
+Counting objects: 100% (53/53), done.
+Compressing objects: 100% (36/36), done.
+Writing objects: 100% (40/40), 62.65 MiB | 8.58 MiB/s, done.
+Total 40 (delta 15), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (15/15), completed with 5 local objects.
+remote: warning: See https://gh.io/lfs for more information.
+remote: warning: File awscliv2.zip is 64.27 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+remote: error: GH013: Repository rule violations found for refs/heads/master.
+remote: 
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote: 
+remote:     - Push cannot contain secrets
+remote: 
+remote:     
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push
+remote:     
+remote:     
+remote:       —— Amazon AWS Access Key ID ——————————————————————————
+remote:        locations:
+remote:          - commit: 4d5315c658d74b3e6de94edad456d624cd559525
+remote:            path: .aws/credentials:2
+remote:     
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/joko345/Pem/security/secret-scanning/unblock-secret/2q9WilYfr1c1ZaZzONpUQ86Shkn
+remote:     
+remote:     
+remote:       —— Amazon AWS Secret Access Key ——————————————————————
+remote:        locations:
+remote:          - commit: 4d5315c658d74b3e6de94edad456d624cd559525
+remote:            path: .aws/credentials:3
+remote:     
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/joko345/Pem/security/secret-scanning/unblock-secret/2q9WijBFjCw5KrM2pW3m5PqEYFg
+remote:     
+remote: 
+remote: 
+To https://github.com/joko345/Pem.git
+ ! [remote rejected] master -> master (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/joko345/Pem.git'
+git filter-branch --force --index-filter "git rm --cached --ignore-unmatch .aws/credentials" --prune-empty --tag-name-filter cat -- --all
+sudo apt install git-filter-repo
+git filter-repo --path .aws/credentials --invert-paths
+git filter-repo --path .aws/credentials --invert-paths --force
+git add .
+git commit -m 'new;
+'
+git add .
+git commit -m 'new;
+
+
+git commit -m 'new'
+git push --force origin master
+git remote -v
+git remote add origin https://github.com/joko345/Pem.git
+git fetch
+git branch
+git add .
+git commit -m 'new'
+git Pem1
+cd Pem1
+git remote -v
+cd ..
+git add .
+git commit -m 'new'
+docker-machine create -d amazonec2 \
+--amazonec2-region ap-southeast-1 \
+--amazonec2-instance-type t2.micro \
+--amazonec2-ssh-keypath ~/docker-go/aws2x.pem \
+--amazonec2-ssh-user ubuntu
+docker-machine create -d amazonec2 --amazonec2-region ap-southeast-1 --amazonec2-instance-type t2.micro --amazonec2-ssh-keypath ~/docker-go/aws2x.pem --amazonec2-ssh-user ubuntu aws-cli-go
+docker-machine create -d amazonec2 --amazonec2-region ap-southeast-1 --amazonec2-instance-type t2.micro --amazonec2-ssh-keypath ~/docker-go/aws2x.pem --amazonec2-ssh-user ubuntu aws-cli-goM
+docker-machine create -d amazonec2 --amazonec2-region ap-southeast-1 --amazonec2-instance-type t2.micro --amazonec2-ssh-keypath ~/docker-go/aws2x.pem --amazonec2-ssh-user ubuntu --engine-install-url https://get.docker.com/ aws-cli-go11
+eval $(docker-machine env 'Night')
+docker-machine ls
+docker-machine status aws-cli-study211
+uname -a
+sudo apt update
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
+docker-machine -D create --driver amazonec2 --amazonec2-region ap-southeast-1 --amazonec2-instance-type t2.micro Night
+cd docker-go
+docker build -t docker-go .
+sudo usermod -aG docker $USER
+docker build -t docker-go .
+ls -l /var/run/docker.sock
+sudo docker build -t docker-go .
+docker run -p 8080:8080 -it docker-go
+docker build -t docker-go .
+cd .. docker-go
+cd docker-go
+docker build -t docker-go .
+cd docker-go
+docker build -t docker-go .
+sudo docker build -t docker-go .
+groups
+sudo chmod 666 /var/run/docker.sock
+sudo systemctl status docker
+docker run -p 8080:8080 -it docker-go
+sudo docker build -t docker-go .
+docker run -p 5000:5000 -it docker-go
+pm2 lsit
+pm2 list
+cd ..
+npm install pm2@latest -g
+pm2 start npm --name "Pem1" -- start
+pm2 save
+pm2 startup
+sudo env PATH=$PATH:/home/ubuntu/.nvm/versions/node/v21.7.1/bin /home/ubuntu/.nvm/versions/node/v21.7.1/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
+pm2 save
+pm2 startup
+pm2 list
+pm2 start npm --name "Pem1" -- start
+curl http://localhost:9001/
+pm2 save
+pm2 restart Pem1
+cd Pem1
+node server.js
+cd ..
+cd docker-go
+docker run -p 5000:5000 -it docker-go
+sdad
