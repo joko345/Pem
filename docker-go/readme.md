@@ -11,3 +11,46 @@ RUN go build -o main
 CMD ["/app/main"]
 //docker menjalankan perintah layaknya cmd ubuntu
 docker build -t "nama folder project" .
+
+
+install aws cli
+sudo apt update
+sudo apt install unzip curl -y
+sudo yum update -y
+sudo yum install unzip curl -y
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+aws --version
+aws configure
+
+
+install docker machine
+curl -L https://github.com/docker/machine/releases/download/v0.16.2/docker-machine-$(uname -s)-$(uname -m) > /tmp/docker-machine
+sudo mv /tmp/docker-machine /usr/local/bin/docker-machine
+sudo chmod +x /usr/local/bin/docker-machine
+docker-machine --version
+sudo curl -L https://raw.githubusercontent.com/docker/machine/master/contrib/completion/bash/docker-machine.bash | sudo tee /etc/bash_completion.d/docker-machine > /dev/null
+source /etc/bash_completion.d/docker-machine
+
+membuat file pub dari file pem
+ssh-keygen -y -f ~/docker-go/aws2x.pem > ~/docker-go/aws2x.pem.pub
+atur izin file 
+chmod 400 ~/downloads/docker-go/aws2x.pem
+untuk poweshel=
+docker-machine create -d amazonec2 `
+--amazonec2-region ap-southeast-1 `
+--amazonec2-instance-type t2.micro `
+--amazonec2-ssh-keypath "C:\Users\Joko Prasetyo Utomo\downloads\aws2x.pem" `
+--amazonec2-ssh-user ubuntu `
+aws-cli-study2
+
+
+
+buat aws
+docker-machine create -d amazonec2 \
+--amazonec2-region ap-southeast-1 \
+--amazonec2-instance-type t2.micro \
+--amazonec2-ssh-keypath ~/docker-go/aws2x.pem \
+--amazonec2-ssh-user ubuntu \
+aws-cli-go
