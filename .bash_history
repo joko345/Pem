@@ -366,3 +366,24 @@ cd ..
 cd docker-go
 docker run -p 5000:5000 -it docker-go
 sdad
+git add .
+git commit -m 'new'
+git push -u origin
+sudo service docker start
+sudo amazon-linux-extras install docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+docker --version
+docker build -t docker-go .
+cd docker-go
+docker build -t docker-go .
+./aws2x.ps1
+chmod +x aws2x.ps1
+./aws2x.ps1
+docker rm -f docker-go
+./aws2x.ps1
+docker ps
+docker run -d --restart unless-stopped --name docker-go golang:alpine
+cd docker-go
+docker ps
+cd ..

@@ -2,7 +2,7 @@ ssh-keygen -t rsa -b 4096 -C "jokoutomo190.ju@gmail.com"
 
 ssh -i "zila.pem" ubuntu@ec2-3-0-16-46.ap-southeast-1.compute.amazonaws.com (yes)
 
-$path = ".\zila.pem"
+$path = ".\aws2x.pem"
 
 # Reset to remove explicit permissions
 

@@ -43,8 +43,7 @@ docker-machine create -d amazonec2 `
   --amazonec2-instance-type t2.micro `
   --amazonec2-ssh-keypath "C:\Users\Joko Prasetyo Utomo\downloads\aws2x.pem" `
   --amazonec2-ssh-user ubuntu `
-  --engine-install-url https://get.docker.com/ `
-  aws-cli-study21
+  aws-cli-stud
 
 buat aws
 docker-machine create -d amazonec2 \
@@ -58,3 +57,7 @@ aws-cli-go
 pada aws, agar comannd yang berjalan sinkron dengan di aws=
 & docker-machine env aws-cli-study211 | Invoke-Expression
 docker-machine regenerate-certs aws-cli-study211
+
+
+jika koneksi ec2 dengan docker buat pub file dulu dan konfigurasi file powershel aws.ps1
+koneksi ec dengan docker agar bisa ubah file ec2 secara lokal tanpa konek ke remote explorer 
